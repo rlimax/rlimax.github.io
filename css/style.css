@@ -44,12 +44,15 @@
 	 background-color: darkblue;
  }
  .cblue{
-	 background-color: rgba(135,206,235,.3);
+	 background-color: rgb(105, 105, 247);/*rgba(135,206,235,.3);*/
  }
  .dblue{
 	 background-image: linear-gradient(blue, darkblue);
  }
  .sombra{
 	 box-shadow: 0px 2px 2px darkblue;
+ }
+ .tim{
+	 font-size: 18pt;
  }
  

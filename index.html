@@ -11,37 +11,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/function.js"></script>
 </head>
 
-<body>
+<body onload="setInterval(function(){atual()},999)">
+
     <!-- Menu de Navegação -->
     <nav class="navbar navbar-expand-lg navbar-light sombra dblue font-weight-bold fixed-top">
         <div class="container">
+			<div id="hora" class="text-white font-weight-bold">
+			</div>
             <a class="navbar-brand" href="#"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" 
-			aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+			aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars text-white"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Home</a>
+                        <a class="nav-link text-white" href="#">&#9776;Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#projetos">Projetos</a>
+                        <a class="nav-link text-white" href="#projetos">&#9776;Projetos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#tragetoria">Tragetória</a>
+                        <a class="nav-link text-white" href="#tragetoria">&#9776;Tragetória</a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#contatos">Contatos</a>
+                        <a class="nav-link text-white" href="#contatos">&#9776;Contatos</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <div class="container">
         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-            <h2 class="text-center mt-5 cblue py-3">Um pouco sobre</h2>
+            <h2 class="text-center mt-5 text-white cblue py-3">Um pouco sobre</h2>
         </div>
         <div class="row featurette">
             <div class="col-md-8">
@@ -68,7 +72,7 @@
 
         <a id="projetos"></a>
         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-            <h2 class="text-center cblue py-3">Projetos</h2>
+            <h2 class="text-center text-white cblue py-3">Projetos</h2>
         </div>
         <div class="card-deck mb-3 ">
             <div class="card mb-4 box-shadow">
@@ -121,7 +125,7 @@
         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
             <!-- <h1 class="display-4"></h1> -->
 
-            <h2 class="text-center py-3  cblue">Tragetória</h2>
+            <h2 class="text-center py-3 text-white cblue">Tragetória</h2>
         </div>
         <div class="container py-2 mt-4 mb-4">
             <!--/row-->
@@ -221,7 +225,7 @@
         <a id="contatos"></a>
         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
 
-            <h2 class="text-center cblue mb-5 py-3">Contatos</h2>
+            <h2 class="text-center text-white cblue mb-5 py-3">Contatos</h2>
             <p class="text-center">
                 <a target="_blank" href="https://github.com/rlimax/">
                     <button class="btn btn-outline-dark"><i class="fab fa-github-alt"></i> GitHub</button>
