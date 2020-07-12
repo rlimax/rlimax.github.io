@@ -55,4 +55,15 @@
  .tim{
 	 font-size: 18pt;
  }
- 
+ li{
+	 text-align: center;
+	 width: 140px;
+	 padding: 0px 10px;
+	 transition: all .3s linear;
+ }
+ li:hover{
+	/*background-color: rgba(255,255,255,.4);*/
+	background-color: rgba(255,255,255,.3);
+	border-radius: 10px 0px;
+
+ }
