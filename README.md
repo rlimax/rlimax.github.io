@@ -3,8 +3,8 @@ Personal site
 
 **Site de apresentação**
 
-Desenvolvido utilizando modelo com as seguintes tecnologias:
-
+Desenvolvido com as seguintes tecnologias:
+-- Em atualização
 <ul>
   <li>HTML</li>
   <li>Javascript</li>

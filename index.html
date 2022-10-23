@@ -4,165 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/function.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 
-<body onload="setInterval(function(){atual()},999)">
+<body onload="setInterval(function(){atual();},999);setInterval(function(){foguete();},100)">
 
     <!-- Menu de Navegação -->
-    <nav class="navbar navbar-expand-lg navbar-light sombra dblue font-weight-bold fixed-top">
-        <div class="container">
-			<div id="hora" class="text-white font-weight-bold">
-			</div>
-            <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" 
-			aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars text-white"></i></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#projetos">Projetos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#contatos">Contatos</a>
-                    </li>
-                </ul>
+    <nav class="navbar navbar-expand-lg fundobar fixed-top">
+			<div id="hora" class="text-white font-weight-bold"></div>
+            <div class="contain">
+                <div class="cor cor1" onclick="backcor(1)"></div>
+                <div class="cor cor2" onclick="backcor(2)"></div>
+                <div class="cor cor3" onclick="backcor(3)"></div>
             </div>
-        </div>
     </nav>
-
+    
     <div class="container">
-        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-            <h2 class="text-center mt-5 text-white cblue py-3">Um pouco sobre</h2>
-        </div>
-        <div class="row featurette">
-            <div class="col-md-8">
-                <p class="lead">
-                    Algumas de minhas <em>skills</em> envolvem desenvolver e manter funcionalidades de aplicações Web, processos de ETL e automatizar algumas tarefas com scripts, utilizando
-				para isso técnicas de raciocínio lógico, capacidade analítica e pensamento criativo.
-                </p>
-            </div>
-            <div class="col-md-4 center">
-                <img id="ft" class="featurette-image img-fluid mx-auto radius" src="./img/ft.png"
-                    alt="Foto de perfil Rodrigo Lima">
-            </div>
-        </div>
+        <img src="./img/brazil.png" class="fundo">
+        <img id="fog" src="./img/foguete.png" class="foguete">
+        <div id="localidade">&#9906; Brasília/DF</div>
 
-        <a id="projetos"></a>
-        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-            <h2 class="text-center text-white cblue py-3">Projetos</h2>
-        </div>
-        <div class="card-deck mb-3 ">
-            <div class="card mb-4 box-shadow">
-                <div class="card-header dblue">
-                    <h4 class="my-0 font-weight-bold text-white text-center">HTML5 - Google Glass</h4>
-                </div>
-                <div class="card-body">
-                    <p>Projeto construído ao longo do curso de HTML5 através de vídeo aula pelo
-                        canal <a href="https://www.youtube.com/channel/UCrWvhVmt0Qac3HgsjQK62FQ" target="_blank"
-                            rel="noopener noreferrer">Curso em Vídeo</a>, outras tecnologias também abordadas nesse
-                        curso
-                        foram CSS e JavaScript.</p>
-						<br />
-                    <p>Para ver o código fonte clique <a target="_blank"
-                            href="https://github.com/rlimax/googleglass">aqui.</a></p>
-                    <a href="https://rlimax.github.io/googleglass/" target="_blank"
-                        class="btn btn-lg btn-block bg-success text-white font-weight-bold" style="margin-bottom: 0pt;">Acessar</a>
-                </div>
-            </div>
-            <div class="card mb-4 box-shadow">
-                <div class="card-header dblue">
-                    <h4 class="my-0 font-weight-bold text-white text-center">JAVA - Servlet Email</h4>
-                </div>
-                <div class="card-body">
-                    <p>Módulo básico de tratamento para requisições WEB, visando cadastro de emails e mensagens curtas com persistência em 
-					um banco de dados Mysql.<br />Servidor de aplicações - HEROKU.<br />Servidor BD - Google Cloud.
-                    </p>
-                    <p>Para ver o código fonte clique <a target="_blank"
-                            href="https://github.com/rlimax/servlet_cadEmail">aqui.</a></p>
-                    <a href="https://stormy-sands-15439.herokuapp.com/"
-                        class="btn btn-lg btn-block bg-success text-white font-weight-bold" style="margin-bottom: 0pt;">Acessar</a>
-                </div>
-            </div>
-            <div class="card mb-4 box-shadow">
-                <div class="card-header dblue">
-                    <h4 class="my-0 font-weight-bold text-white text-center">JAVA - Servlet Pedidos</h4>
-                </div>
-                <div class="card-body">
-                    <p>Aplicação para requisições WEB, visando o cadastramento de pedidos de compra, com transações em 
-					um banco de dados Mysql.<br />Servidor de aplicações - HEROKU.<br />Servidor BD - Google Cloud.</p>
-                    <br/>
-                    <p>Para ver o código fonte clique <a target="_blank" href="https://github.com/rlimax/organics">aqui.</a></p>
-                    <a href="https://pacific-bayou-20579.herokuapp.com/"
-                        class="btn btn-lg btn-block bg-success text-white font-weight-bold" style="margin-bottom: 0pt;">Acessar</a>
-                </div>
-            </div>
-        </div>
-		<div class="card-deck mb-3 ">
-            <div class="card mb-4 box-shadow">
-                <div class="card-header dblue">
-                    <h4 class="my-0 font-weight-bold text-white text-center">JAVASCRIPT - Estatística</h4>
-                </div>
-                <div class="card-body">
-                    <p>Projeto para desenvolver habilidades com estatística descritiva, utilizando a linguagem javascript.<br />Processamento no cliente.<br /></p>
-                    <br/><br/>
-                    <p>Para ver o código fonte clique <a target="_blank" href="https://github.com/rlimax/statistic">aqui.</a></p>
-                    <a href="https://rlimax.github.io/statistic/" target="_blank"
-                        class="btn btn-lg btn-block bg-success text-white font-weight-bold" style="margin-bottom: 0pt;">Acessar</a>
-                </div>
-            </div>
-            <div class="card mb-4 box-shadow">
-                <div class="card-header dblue">
-                    <h4 class="my-0 font-weight-bold text-white text-center">JAVASCRIPT - ReactJS</h4>
-                </div>
-                <div class="card-body">
-                    <p>Projeto para organização de videos em playlist, utilizando ReactJS.<br />Imersão ReactJS da Alura.<br />Em produção 3/5.</p>
-                    <br/><br/>
-                    <p>Para ver o código fonte clique <a target="_blank" href="https://github.com/rlimax/appleflix">aqui.</a></p>
-                    <a href="https://appleflix.vercel.app/" target="_blank"
-                        class="btn btn-lg btn-block bg-success text-white font-weight-bold" style="margin-bottom: 0pt;">Acessar</a>
-                </div>
-            </div>
-            <div class="card mb-4 box-shadow">
-                <div class="card-header dblue">
-                    <h4 class="my-0 font-weight-bold text-white text-center"></h4>
-                </div>
-                <div class="card-body">
-                </div>
-            </div>
-		</div>
-        <!--Contatos-->
-        <a id="contatos"></a>
-        <div class="pricing-header px-3 py-3 pt-md-1 pb-md-4 mx-auto text-center">
 
-            <h2 class="text-center text-white cblue mb-5 py-3">Contatos</h2>
-            <p class="text-center">
-                <a target="_blank" href="https://github.com/rlimax/">
-                    <button class="btn btn-dark"><i class="fab fa-github-alt"></i> GitHub</button>
-                </a>
-                <a target=" _blank" href="https://www.linkedin.com/in/rodrigo-lima-7269a226/">
-                    <button class="btn btn-dark"><i class="fab fa-linkedin-in"></i> Linkedin</button>
-                </a>
-                <a target="_blank" href="mailto:rodrigoetb@gmail.com">
-                    <button class="btn btn-dark"><i class="far fa-paper-plane"></i>
-                        E-mail</button>
-                </a>
-            </p>
-
+        <div id="profile" class="bloco">
+            <span class="titulo">Resumo</span>
+            <img class="ft" src="./img/ft.png" />
+            <p>
+                RODRIGO LIMA<br><br>
+                Me considero um profissional com conhecimento abrangente das várias etapas do ciclo de desenvolvimento de softwares e negócios, com capacidade analítica
+                e mantendo sempre a busca do melhor alinhamento entre tecnologia e organização, agregando assim, valor às atividades em que atuo.
             </p>
         </div>
 
+
+        <br>
+        <div class="blocof formacaotit">
+            <span class="titulo">Formação</span>
+            <div class="formacao"><p>2012 - Graduação (Gestão em sistemas da informação)</p></div>
+            <div class="formacao"><p>2016 - Pós-graduação (Especialização em Banco de dados)</p></div>
+        </div>
+        <br>
+        <div id="experience" class="bloco">
+            <span class="titulo">Experiência</span>
+            <div id="exp1" class="exp" onclick="expande(1)"><p class="sideside">2020/2022 - Autônomo (Consultor)</p><span id="ico1">&#10010;</span></div>
+            <p id="item1" class="hidden">
+                &#10003; Manutenção e configuração em computadores e dispositivos móveis.<br>
+                &#10003; Automatização de análises e processos.<br>
+                &#10003; Backup e recuperação de dados.<br>
+                &#10003; Análise, elaboração e cruzamento de relatórios e tabelas dinâmicas.<br>
+                &#10003; Instalação e configuração de softwares com baixa, média e alta complexidade.<br>
+            </p>
+            <div id="exp2" class="exp" onclick="expande(2)"><p class="sideside">2019/2020 - Ministério da Saúde - Fiotec (Analista de sistemas)</p><span id="ico2">&#10010;</span></div>
+            <p id="item2" class="hidden">
+                &#10003; Tabulação de dados com ferramenta própria do Ministério da saúde.<br>
+                &#10003; Análise e elaboração de relatórios e tabelas dinâmicas.<br>
+                &#10003; Automatização de processos e backups.<br>
+                &#10003; Cruzamento de informações com ferramenta ACCESS.<br>
+                &#10003; Carga de dados, cruzamento, análise em banco de dados.<br>
+            </p>
+            <div id="exp3" class="exp" onclick="expande(3)"><p class="sideside">2017/2019 - Autônomo (Consultor)</p><span id="ico3">&#10010;</span></div>
+            <p id="item3" class="hidden">
+                &#10003; Manutenção e configuração em computadores e dispositivos móveis.<br>
+                &#10003; Análise de contratos de TI, ajuste em softwares de gestão.<br>
+                &#10003; Análise, elaboração e cruzamento de relatórios e tabelas dinâmicas.<br>
+                &#10003; Instalação e configuração de softwares com baixa, média e alta complexidade.<br>
+            </p>
+            <div id="exp4" class="exp" onclick="expande(4)"><p class="sideside">2016/2016 - Ministério da Saúde - Fiotec (Analista de sistemas)</p><span id="ico4">&#10010;</span></div>
+            <p id="item4" class="hidden">
+                &#10003; Análise e elaboração de relatórios (tabelas dinâmicas) e formulários (VBA).<br>
+                &#10003; Administração de dados e SGBD MySQL.<br>
+                &#10003; Cruzamento de informações com ferramenta (ACCESS).<br>
+                &#10003; Apoio ao desenvolvimento de sistema de gestão de documentos(PHP).<br>
+            </p>
+            <div id="exp5" class="exp" onclick="expande(5)"><p class="sideside">2015/2016 - Gás Tecnologia (Analista de segurança da informação)</p><span id="ico5">&#10010;</span></div>
+            <p id="item5" class="hidden">
+                &#10003; Implantação de ferramentas de segurança da informação.<br>
+                &#10003; Análise é implementação de indicadores de acessos e de segurança.<br>
+                &#10003; Criação de Views, Funções e extração de insumos utilizados em relatórios (Oracle).<br>
+                &#10003; Montagem de cenários Windows e Linux em ferramentas de virtualização.<br>
+            </p>
+            <div id="exp6" class="exp" onclick="expande(6)"><p class="sideside">2014/2015 - Ministério da Saúde - OPAS (Analista de dados)</p><span id="ico6">&#10010;</span></div>
+            <p id="item6" class="hidden">
+                &#10003; Criação e manutenção de objetos de banco de dados (Oracle).<br>
+                &#10003; Cruzamento de informações e confecção de relatórios (ACCESS).<br>
+                &#10003; Análise de relatórios disponibilizados em ambiente WEB.<br>
+            </p>
+            <div id="exp7" class="exp" onclick="expande(7)"><p class="sideside">2012/2014 - DFtrans (Técnico de processamento)</p><span id="ico7">&#10010;</span></div>
+            <p id="item7" class="hidden">
+                &#10003; Carga, extração e tratamento de base de dados com ferramenta de ETL.<br>
+                &#10003; Criação e manutenção de Funções, Views, Triggers e Procedures (Oracle e PostgreSQL).<br>
+                &#10003; Consultas em base de dados geográficas (PostgreSQL/PostGIS).<br>
+                &#10003; Auditoria e tratamento de erros do sistema de transporte público.<br>
+            </p>
+        </div>
+        <br>
+        <div id="courses" class="bloco">
+            <span class="titulo">Cursos</span>
+        </div>
+        <script src="js/grafic.js"></script>
     </div>
-
 </body>
 
 </html>
